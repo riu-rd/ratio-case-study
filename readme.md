@@ -46,3 +46,19 @@
 - accepts title, description, icon, and date, which are distinct notification item props as can be seen in the Figma wireframe
 
 ## How to Run
+
+- Install Expo Go from the Play Store or App Store
+- Install dependencies
+
+```bash
+npm install
+```
+
+- Start the Application with Expo
+
+```bash
+npx expo start -c
+```
+
+- Scan the QR code provided using Expo Go
+- The app should launch in your mobile device
