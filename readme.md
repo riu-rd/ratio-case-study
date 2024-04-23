@@ -50,6 +50,7 @@ npm run dev
 
 ### Running the Frontend
 
+- go to the directory of the frontend `/frontend`
 - Install `Expo Go` from the Play Store or App Store
 - Install dependencies
 
