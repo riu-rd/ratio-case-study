@@ -1,9 +1,11 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import icons from "../constants/icons"
-import { router } from 'expo-router'
+import { useRouter } from 'expo-router'
 
 const NotificationItem = ({title, description, icon, date}) => {
+  const router = useRouter();
+
   return (
     <>
       <View className="flex flex-row justify-end items-center h-fit w-[95%] gap-1 mt-6">
@@ -13,7 +15,7 @@ const NotificationItem = ({title, description, icon, date}) => {
 
       <TouchableOpacity className="flex flex-row w-full gap-1"
       onPress={()=> {
-        router.push('notificationview')
+        router.push({ pathname: "notificationview", params: { title, description, icon, date } })
       }}>
         <View className="items-center justify-center">
           <View className="border-black border-[1px] w-16 h-16 rounded-full items-center justify-center">

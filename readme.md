@@ -1,53 +1,56 @@
 # Ratio Case Study
 
-## **_Task_**: Exactly replicate the Figma wireframe into front-end code
+## **_Task_**: Exactly replicate the Figma wireframe into full-stack code
 
-### Frameworks Used
+### Frameworks Used for FRONTEND
 
 - React Native
 - Tailwind CSS (NativeWind)
 - Expo (Framework to build and test react native apps)
 
-### Libraries Used
+### Frameworks Used for BACKEND
+
+- Node.js
+- Express.js
+
+### Libraries and Tools Used
 
 - expo-router - for routing and opening a blank page on notification click
 - react-native-safe-area-context - to make sure that the full screen will be shown on any device
 - react-native-screens
 - expo-linking
-- expo-constants
-- expo-status-bar - to ensure that the device's status bar is
+- expo-constants - to connect expo app with the local machine
+- expo-status-bar - to ensure that the device's status bar is appropriate
+- axios - for performing fetch calls to the backend server
+- nodemon - for easy express app configuration
 
-### Folder Definitions
+### Folder Definitions for FRONTEND
 
 - app - where the pages of the app are stored, in this case, Notification
 - assets - contains the fonts and icons exported from the Figma wireframe
 - components - Reusable react components
-- constants - constant values such as exported icons and the data in the Figma wireframe
+- constants - constant values such as exported icons
 
-## Short Overview on How it was built
+## How to Run the Full-Stack App
 
-- Most of the elements are positioned using flexbox
-- Uses Safe Area to cater to many devices
-- Uses ScrollView for scalability and to ensure that all notifications will fit
+### Running the Backend Server FIRST
 
-#### In \_layout.jsx
+- go to the directory of the backend `/backend`
+- Install Dependencies
 
-- Before loading the view, all static fonts should be loaded first
-- StatusBar is used to ensure that the status bar of the mobile device is visible
-- Each Page or View is initialized using Stack
+```bash
+npm install
+```
 
-#### In index.jsx
+- Start the Express App Server listening to port 5555
 
-- In the Figma Wireframe, there are different instances of notifications. All of them are stored in an array in the constants folder. The array is then mapped so that each element would return a NotificationItem component
-- This is for scalability as only the constant array need to be modified to render more NotificationItem components
+```bash
+npm run dev
+```
 
-#### In components/NotificationItem.js
+### Running the Frontend
 
-- accepts title, description, icon, and date, which are distinct notification item props as can be seen in the Figma wireframe
-
-## How to Run
-
-- Install Expo Go from the Play Store or App Store
+- Install `Expo Go` from the Play Store or App Store
 - Install dependencies
 
 ```bash
@@ -60,5 +63,5 @@ npm install
 npx expo start -c
 ```
 
-- Scan the QR code provided using Expo Go
+- Scan the QR code provided using `Expo Go`
 - The app should launch in your mobile device

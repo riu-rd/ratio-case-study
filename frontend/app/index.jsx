@@ -1,13 +1,42 @@
 // @ts-nocheck
 import { Text, View, ScrollView, Image, TouchableOpacity } from "react-native";
-import { router } from "expo-router";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import icons from "../constants/icons"
-import {Notifications} from "../constants/notifications.js"
 import NotificationItem from "../components/NotificationItem";
+import axios from "axios";
+import Constants from "expo-constants";
 
 export default function App() {
+  // Get the IPv4 Address of the Local Machine to connect to the Express Server
+  const uri = Constants.expoConfig.hostUri.split(`:`).shift().concat(`:5555`);
+  // Data from the Express Server
+  const [data, setData] = useState([])
+
+  // Axios GET call to connect to the Express Server
+  useEffect(() => {
+    axios.get(`http://${uri}/user/notifications`)
+    .then((response) => {
+      setData(response.data);
+    })
+    .catch((err) => {
+      console.error(err);
+    })
+  }, []);
+
+  // Set the Icon for each Notification
+  const setIcon = (type) => {
+    if (type === "event") {
+      return icons.eventIcon
+    }
+    else if (type === "security") {
+      return icons.securityIcon
+    }
+    else {
+      return undefined
+    }
+  }
+
   return (
     <SafeAreaView className="bg-primary h-full">
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
@@ -23,11 +52,11 @@ export default function App() {
           <Text className="font-obold text-xl">Notification</Text>
 
           {
-            Notifications.map((notif) => (
+            data.map((notif) => (
               <NotificationItem 
                 title={notif.title}
                 description={notif.description}
-                icon={notif.icon}
+                icon={setIcon(notif.type)}
                 date={notif.date}
               />
             ))
