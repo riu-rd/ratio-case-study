@@ -5,11 +5,28 @@ module.exports = {
     extend: {
       colors: {
         primary: "#FFFFFF",
+        colorlink: "#2EA7D3",
+        colorhandle: "#0883AA",
+        gray: "#919191",
+        colorline: "#EDEDED",
       },
       fontFamily: {
-        obold: ["Outfit-Bold", "sans-serif"], 
-        oregular: ["Outfit-Regular", "sans-serif"],
-        zregular: ["ZillaSlab-Regular", "sans-serif"]
+        outfitthin: ["Outfit-Thin", "sans-serif"], 
+        outfitextralight: ["Outfit-ExtraLight", "sans-serif"], 
+        outfitlight: ["Outfit-Light", "sans-serif"], 
+        outfitnormal: ["Outfit-Normal", "sans-serif"],
+        outfitmedium: ["Outfit-Medium", "sans-serif"],
+        outfitsemibold: ["Outfit-SemiBold", "sans-serif"],
+        outfitbold: ["Outfit-Bold", "sans-serif"],
+        outfitextrabold: ["Outfit-ExtraBold", "sans-serif"],
+        outfitblack: ["Outfit-Black", "sans-serif"],
+
+
+        zillalight: ["ZillaSlab-Light", "sans-serif"],
+        zillanormal: ["ZillaSlab-Normal", "sans-serif"],
+        zillamedium: ["ZillaSlab-Medium", "sans-serif"],
+        zillasemibold: ["ZillaSlab-SemiBold", "sans-serif"],
+        zillabold: ["ZillaSlab-Bold", "sans-serif"],
       },
     },
   },

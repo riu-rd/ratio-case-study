@@ -12,11 +12,34 @@ SplashScreen.preventAutoHideAsync();
 const RootLayout = () => {
   const [fontsLoaded, error] = useFonts({
     // @ts-ignore
+    "Outfit-Thin": require("../assets/fonts/Outfit-Thin.ttf"),
+    // @ts-ignore
+    "Outfit-ExtraLight": require("../assets/fonts/Outfit-ExtraLight.ttf"),
+    // @ts-ignore
+    "Outfit-Light": require("../assets/fonts/Outfit-Light.ttf"),
+    // @ts-ignore
+    "Outfit-Normal": require("../assets/fonts/Outfit-Regular.ttf"),
+    // @ts-ignore
+    "Outfit-Medium": require("../assets/fonts/Outfit-Medium.ttf"),
+    // @ts-ignore
+    "Outfit-SemiBold": require("../assets/fonts/Outfit-SemiBold.ttf"),
+    // @ts-ignore
     "Outfit-Bold": require("../assets/fonts/Outfit-Bold.ttf"),
     // @ts-ignore
-    "Outfit-Regular": require("../assets/fonts/Outfit-Regular.ttf"),
+    "Outfit-ExtraBold": require("../assets/fonts/Outfit-ExtraBold.ttf"),
     // @ts-ignore
-    "ZillaSlab-Regular": require("../assets/fonts/ZillaSlab-Regular.ttf")
+    "Outfit-Black": require("../assets/fonts/Outfit-Black.ttf"),
+    
+    // @ts-ignore
+    "ZillaSlab-Light": require("../assets/fonts/ZillaSlab-Light.ttf"),
+    // @ts-ignore
+    "ZillaSlab-Normal": require("../assets/fonts/ZillaSlab-Regular.ttf"),
+    // @ts-ignore
+    "ZillaSlab-Medium": require("../assets/fonts/ZillaSlab-Medium.ttf"),
+    // @ts-ignore
+    "ZillaSlab-SemiBold": require("../assets/fonts/ZillaSlab-SemiBold.ttf"),
+    // @ts-ignore
+    "ZillaSlab-Bold": require("../assets/fonts/ZillaSlab-Bold.ttf")
   });
 
   /*************************************************************** 
@@ -38,13 +61,16 @@ const RootLayout = () => {
     <>
       <StatusBar
         backgroundColor='#FFFFFF'
-        style="dark"
+        style="light"
       />
+      
       <Stack>
         <Stack.Screen name="index" options={
           {headerShown: false}} />
         <Stack.Screen name="notificationview" options={
         {title: 'View Notification'}} />
+        <Stack.Screen name="preferenceSettings" options={
+          {headerShown: false}} />
       </Stack>
     </>
   )

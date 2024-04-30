@@ -1,5 +1,6 @@
 // @ts-nocheck
-import { Text, View, ScrollView, Image, TouchableOpacity } from "react-native";
+import { Text, View, ScrollView, Image, TouchableOpacity} from "react-native";
+import { Link } from 'expo-router';
 import React, {useEffect, useState} from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import icons from "../constants/icons"
@@ -49,7 +50,13 @@ export default function App() {
             />
           </TouchableOpacity>
             
-          <Text className="font-obold text-xl">Notification</Text>
+          <Text className="font-outfitbold text-xl">Notification </Text>
+
+          <Link
+          className="mb-8 text-blue-500 font-outfitbold text-base absolute top-2 right-5"
+          href='/preferenceSettings'>
+          Settings
+          </Link>
 
           {
             data.map((notif) => (
@@ -65,6 +72,7 @@ export default function App() {
           <View className="flex flex-row justify-end items-center h-fit w-[95%] gap-1 mt-6 mb-10">
             <View className="bg-black w-9/12 h-[1px] mr-2"></View>
           </View>
+          
         </View>
       </ScrollView>
     </SafeAreaView>

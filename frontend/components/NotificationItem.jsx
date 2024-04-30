@@ -9,7 +9,7 @@ const NotificationItem = ({title, description, icon, date}) => {
   return (
     <>
       <View className="flex flex-row justify-end items-center h-fit w-[95%] gap-1 mt-6">
-          <Text className="w-3/12 text-black text-left font-oregular text-sm">{date}</Text>
+          <Text className="w-3/12 text-black text-left font-outfitnormal text-sm">{date}</Text>
           <View className="bg-black w-9/12 h-[1px] mr-2"></View>
       </View>
 
@@ -27,9 +27,9 @@ const NotificationItem = ({title, description, icon, date}) => {
         </View>
           
         <View className="justify-start items-start gap-2 flex-wrap w-full">
-          <Text className="font-obold text-base">{title}</Text>
+          <Text className="font-outfitbold text-base">{title}</Text>
           <View className="flex flex-row justify-between items-center w-3/4">
-            <Text className="font-zregular text-xs w-[85%]">{description}</Text>
+            <Text className="font-zillanormal text-xs w-[85%]">{description}</Text>
             <Image 
               source ={icons.arrow}
               resizeMode='contain'
