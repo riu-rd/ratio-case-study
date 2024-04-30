@@ -69,8 +69,19 @@ const RootLayout = () => {
           {headerShown: false}} />
         <Stack.Screen name="notificationview" options={
         {title: 'View Notification'}} />
+
         <Stack.Screen name="preferenceSettings" options={
           {headerShown: false}} />
+        <Stack.Screen name="gender" options={
+        {
+          title: 'Gender',
+          headerTitleAlign: 'center',
+          headerTitleStyle: {
+            fontSize: 28,
+            color: 'black',
+            fontFamily: "Outfit-Bold"
+          }
+        }} />
       </Stack>
     </>
   )

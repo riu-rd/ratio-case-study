@@ -1,17 +1,58 @@
-import React, { useState } from 'react';
-import { View, Text, ScrollView, TouchableOpacity, Switch, Image } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Text, ScrollView, TouchableOpacity, Switch, Image} from 'react-native';
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Link } from 'expo-router';
-import Slider from '@react-native-community/slider';
 import MultiSlider from '@ptomasroos/react-native-multi-slider';
 import icons from '../constants/icons';
+import { useRouter, useLocalSearchParams } from 'expo-router'
+
+const sliderLabel = (props, isMulti) => (
+  <>
+    <View style={{
+      height: 20,
+      width: 20,
+      position: 'absolute',
+      left: props.oneMarkerLeftPosition - 7.5,
+      bottom: -8
+    }}>
+      <Text className="text-xs text-gray font-outfitnormal">
+        {props.oneMarkerValue}
+      </Text> 
+    </View>
+    {
+      isMulti ?
+      <View style={{
+      height: 20,
+      width: 20,
+      position: 'absolute',
+      left: props.twoMarkerLeftPosition - 7.5,
+      bottom: -10
+    }}>
+      <Text className="text-xs text-gray font-outfitnormal">
+        {props.twoMarkerValue}
+      </Text> 
+    </View>
+    :
+    null
+    }
+  </>
+)
 
 const preferenceSettings = () => {
-  const [distance, setDistance] = useState([0]);
+  const router = useRouter();
+
+  const [distance, setDistance] = useState([50]);
   const [enabledDistance, setEnabledDistance] = useState(false);
+  const { gender } = useLocalSearchParams();
+  const [displayGender, setDisplayGender] = useState("Not Specified");
   const [age, setAge] = useState([18, 25]);
   const [enabledAge, setEnabledAge] = useState(false);
   const [isVerified, setIsVerified] = useState(false);
+
+  useEffect(() => {
+    if (gender){
+      setDisplayGender(gender);
+    }
+  }, [gender]);
   
   return (
     <SafeAreaView className="bg-primary w-full h-full">
@@ -42,7 +83,7 @@ const preferenceSettings = () => {
               <MultiSlider 
                 values={distance}
                 min={0}
-                max={101}
+                max={100}
                 step={1}
                 sliderLength={300}
                 allowOverlap={false}
@@ -54,13 +95,12 @@ const preferenceSettings = () => {
                 selectedStyle={{backgroundColor:'#0883AA'}}
                 unselectedStyle={{backgroundColor:'#919191'}}
                 onValuesChange={(value) => setDistance(value)}
+                enableLabel={true}
+                customLabel={(props) => sliderLabel(props, false)}
               />
-              <Text className="text-xs text-gray font-outfitnormal">
-                {distance[0]}
-              </Text>
             </View>
 
-            <View className="flex flex-row justify-between items-center w-full">
+            <View className="flex flex-row justify-between items-center w-full mt-2">
               <Text className="font-outfitsemibold text-gray text-xs">
                 Only show People in this range
               </Text>
@@ -77,13 +117,17 @@ const preferenceSettings = () => {
 
           <View className="w-full h-[1px] bg-colorline" />
 
-          <TouchableOpacity className="w-full flex flex-row justify-between items-center px-5 py-3">
+          <TouchableOpacity className="w-full flex flex-row justify-between items-center px-5 py-3"
+          onPress={()=> {
+            router.push({ pathname: "/gender", params: { displayGender } })
+          }}
+          >
             <Text className="font-outfitsemibold text-sm">
               Gender
             </Text>
             <View className="flex flex-row justify-center items-center gap-2">
                 <Text className="font-outfitsemibold text-sm">
-                  Male
+                  {displayGender}
                 </Text>
                 <Image 
                   source ={icons.arrow}
@@ -103,23 +147,27 @@ const preferenceSettings = () => {
                 {age[0]}-{age[1]}
               </Text>
             </View>
-            <MultiSlider 
-                values={age}
-                min={18}
-                max={51}
-                step={1}
-                sliderLength={300}
-                allowOverlap={false}
-                snapped={true}
-                markerStyle={{ 
-                  height:20, width: 20, borderRadius: 10, backgroundColor:'#0883AA', borderWidth: 0,
-                }}
-                trackStyle={{ borderRadius: 5, height: 1.5 }}
-                selectedStyle={{backgroundColor:'#0883AA'}}
-                unselectedStyle={{backgroundColor:'#919191'}}
-                onValuesChange={(value) => setAge(value)}
-              />
-              <View className="flex flex-row justify-between items-center w-full">
+            <View className="w-full h-fit items-center justify-center">
+              <MultiSlider 
+                  values={age}
+                  min={18}
+                  max={50}
+                  step={1}
+                  sliderLength={300}
+                  allowOverlap={false}
+                  snapped={true}
+                  trackStyle={{ borderRadius: 5, height: 1.5 }}
+                  selectedStyle={{backgroundColor:'#0883AA'}}
+                  unselectedStyle={{backgroundColor:'#919191'}}
+                  onValuesChange={(value) => setAge(value)}
+                  markerStyle={{ 
+                    height:20, width: 20, borderRadius: 10, backgroundColor:'#0883AA', borderWidth: 0,
+                  }}
+                  enableLabel={true}
+                  customLabel={(props) => sliderLabel(props, true)}
+                />
+              </View>
+              <View className="flex flex-row justify-between items-center w-full mt-2">
                 <Text className="font-outfitsemibold text-gray text-xs">
                   Only show People in this range
                 </Text>

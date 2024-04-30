@@ -7,9 +7,20 @@ import eventIcon from "../assets/icons/event.png";
 // @ts-ignore
 import securityIcon from "../assets/icons/security.png";
 
+// @ts-ignore
+import male from "../assets/icons/male.png";
+// @ts-ignore
+import female from "../assets/icons/female.png";
+// @ts-ignore
+import both from "../assets/icons/both.png";
+
 export default {
   arrow,
   backArrow,
   eventIcon,
-  securityIcon
+  securityIcon,
+
+  male,
+  female,
+  both
 };
