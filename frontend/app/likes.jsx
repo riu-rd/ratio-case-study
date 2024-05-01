@@ -12,24 +12,20 @@ const likes = () => {
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <View className="justify-start items-center h-full w-full px-5">
 
-        <Button
-          onPress={() => panelRef.current.togglePanel()}
-          title="Open Modal"
-          color="#0883AA"
-          accessibilityLabel="Open Modal"
-        />
-
-        <BottomSheet 
-          ref={ref => panelRef.current = ref}
-          sliderMinHeight={0}
-          sliderMaxHeight={Dimensions.get('window').height * 0.75}
-        >
-          <LikesModal
+          <Button
+            onPress={() => panelRef.current.togglePanel()}
+            title="Open Modal"
+            color="#0883AA"
+            accessibilityLabel="Open Modal"
           />
-        </BottomSheet>
 
-        
-
+          <BottomSheet 
+            ref={ref => panelRef.current = ref}
+            sliderMinHeight={0}
+            sliderMaxHeight={Dimensions.get('window').height * 0.8}
+          >
+            <LikesModal />
+          </BottomSheet>
         </View>
       </ScrollView>
     </SafeAreaView>
