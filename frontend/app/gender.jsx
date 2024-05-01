@@ -32,9 +32,9 @@ const gender = () => {
               Select the options below who you would like to meet
             </Text>
 
-            <GenderButton icon={icons.male} name="Male" color="cyan" handleGender={handleGender} gender={gender}/>
-            <GenderButton icon={icons.female} name="Female" color="fuchsia" handleGender={handleGender} gender={gender}/>
-            <GenderButton icon={icons.both} name="Both" color="yellow" handleGender={handleGender} gender={gender}/>
+            <GenderButton icon={icons.male} name="Male" color="#ecfeff" handleGender={handleGender} gender={gender}/>
+            <GenderButton icon={icons.female} name="Female" color="#fdf4ff" handleGender={handleGender} gender={gender}/>
+            <GenderButton icon={icons.both} name="Both" color="#fffbeb" handleGender={handleGender} gender={gender}/>
             
             <View className="w-full items-start mt-3">
               <Text className="text-gray text-xs font-outfitsemibold text-start w-9/10">
@@ -60,4 +60,4 @@ const gender = () => {
   )
 }
 
-export default gender
+export default gender;

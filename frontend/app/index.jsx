@@ -58,6 +58,12 @@ export default function App() {
           Settings
           </Link>
 
+          <Link
+          className="mb-8 text-blue-500 font-outfitbold text-base absolute top-8 right-5"
+          href='/likes'>
+          Likes
+          </Link>
+
           {
             data.map((notif) => (
               <NotificationItem 

@@ -69,7 +69,8 @@ const RootLayout = () => {
           {headerShown: false}} />
         <Stack.Screen name="notificationview" options={
         {title: 'View Notification'}} />
-
+        <Stack.Screen name="likes" options={
+          {headerShown: false}} />
         <Stack.Screen name="preferenceSettings" options={
           {headerShown: false}} />
         <Stack.Screen name="gender" options={
@@ -83,6 +84,7 @@ const RootLayout = () => {
           }
         }} />
       </Stack>
+      
     </>
   )
 }
