@@ -1,10 +1,12 @@
 import { View, Text, ScrollView, TouchableOpacity, Switch, Image, SafeAreaView, Alert } from 'react-native';
 import SettingsButton from '../components/settingsButton';
-import React, { useEffect, useState } from 'react';
-import { useRouter, useLocalSearchParams } from 'expo-router';
+import React, { useState } from 'react';
+import { useRouter } from 'expo-router';
 import icons from '../constants/icons';
 
 const settings = () => {
+  const router = useRouter();
+
   const [pausedProfile, setPausedProfile] = useState(false);
 
   return (
@@ -38,9 +40,9 @@ const settings = () => {
             <View className="w-full h-[1px] bg-colorline" />
 
             <TouchableOpacity className="w-full flex flex-row justify-between items-center py-3"
-              // onPress={()=> {
-              //   router.replace({ pathname: "/", params: {  } })
-              // }}
+              onPress={()=> {
+                router.push({ pathname: "/emailSettings", params: {  } })
+              }}
             >
               <Text className="font-outfitbold text-sm">
               camilo.siabato.1@gmail.com
@@ -87,9 +89,9 @@ const settings = () => {
             <View className="w-full h-[1px] bg-colorline" />
 
             <TouchableOpacity className="w-full flex flex-row justify-between items-center py-3"
-              // onPress={()=> {
-              //   router.replace({ pathname: "/", params: {  } })
-              // }}
+              onPress={()=> {
+                router.push({ pathname: "/pushNotificationSettings", params: {  } })
+              }}
             >
               <Text className="font-outfitbold text-sm">
               Push Notifications
