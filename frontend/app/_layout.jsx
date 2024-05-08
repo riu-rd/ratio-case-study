@@ -97,7 +97,7 @@ const RootLayout = () => {
           headerBackVisible: false,
           headerRight: () => (
             <TouchableOpacity
-              style={{ marginRight: 10 }}
+              style={{ marginRight: 5 }}
               onPress={() => {
                 router.replace('/');
               }}
@@ -134,7 +134,7 @@ const RootLayout = () => {
           headerBackVisible: false,
           headerRight: () => (
             <TouchableOpacity
-              style={{ marginRight: 10 }}
+              style={{ marginRight: 5 }}
               onPress={() => {
                 router.replace('/');
               }}
