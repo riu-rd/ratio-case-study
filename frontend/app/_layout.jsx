@@ -121,33 +121,53 @@ const RootLayout = () => {
             }
           }} />
         <Stack.Screen
-        name="settings"
-        
-        options={{
-          title: "Settings",
-          headerTitleAlign: 'center',
-          headerTitleStyle: {
-            fontSize: 24,
-            color: 'black',
-            fontFamily: 'Outfit-Bold'
-          },
-          headerBackVisible: false,
-          headerRight: () => (
-            <TouchableOpacity
-              style={{ marginRight: 5 }}
-              onPress={() => {
-                router.replace('/');
-              }}
-            >
-              <Text 
-              className="font-outfitsemibold text-base text-colorlink underline">
-                Done
-              </Text>
-            </TouchableOpacity>
-            )
+          name="settings"
+          options={{
+            title: "Settings",
+            headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontSize: 24,
+              color: 'black',
+              fontFamily: 'Outfit-Bold'
+            },
+            headerBackVisible: false,
+            headerRight: () => (
+              <TouchableOpacity
+                style={{ marginRight: 5 }}
+                onPress={() => {
+                  router.replace('/');
+                }}
+              >
+                <Text 
+                className="font-outfitsemibold text-base text-colorlink underline">
+                  Done
+                </Text>
+              </TouchableOpacity>
+              )
           }} />
-      </Stack>
-      
+        <Stack.Screen 
+          name="pushNotificationSettings" 
+          options={{
+            title: 'Push Notification',
+            headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontSize: 20,
+              color: 'black',
+              fontFamily: "Outfit-Bold"
+            }
+          }} />
+        <Stack.Screen 
+          name="emailSettings" 
+          options={{
+            title: 'Email',
+            headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontSize: 20,
+              color: 'black',
+              fontFamily: "Outfit-Bold"
+            }
+          }} />
+        </Stack>
     </>
   )
 }
