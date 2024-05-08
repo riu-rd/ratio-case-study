@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, ScrollView, TouchableOpacity, Switch, Image} from 'react-native';
-import { SafeAreaView } from "react-native-safe-area-context";
+import { View, Text, ScrollView, TouchableOpacity, Switch, Image, SafeAreaView } from 'react-native';
+// import { SafeAreaView } from "react-native-safe-area-context";
 import MultiSlider from '@ptomasroos/react-native-multi-slider';
 import icons from '../constants/icons';
-import { useRouter, useLocalSearchParams } from 'expo-router'
+import { useRouter, useLocalSearchParams } from 'expo-router';
 
 const sliderLabel = (props, isMulti) => (
   <>
@@ -55,25 +55,9 @@ const preferenceSettings = () => {
   }, [gender]);
   
   return (
-    <SafeAreaView className="bg-primary w-full h-full">
+    <SafeAreaView className="bg-primary w-full h-full justify-start">
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <View className="justify-start items-center h-full w-full">
-
-          <View className="w-full h-[1px] bg-colorline" />
-
-          <View className="flex flex-row justify-between items-center w-full px-5 py-3">
-            <Text className="font-outfitbold text-xl text-black">
-              Preference Settings
-            </Text>
-            <TouchableOpacity
-            className="justify-center items-center">
-              <Text className="font-outfitsemibold text-base text-colorlink underline">
-                Done
-              </Text>
-            </TouchableOpacity>
-          </View>
-
-          <View className="w-full h-[1px] bg-colorline" />
 
           <View className="px-5 py-3 w-full">
             <Text className="font-outfitbold text-base text-black">
@@ -119,7 +103,7 @@ const preferenceSettings = () => {
 
           <TouchableOpacity className="w-full flex flex-row justify-between items-center px-5 py-3"
           onPress={()=> {
-            router.push({ pathname: "/gender", params: { displayGender } })
+            router.replace({ pathname: "/gender", params: { displayGender } })
           }}
           >
             <Text className="font-outfitsemibold text-sm">

@@ -15,7 +15,7 @@ const NotificationItem = ({title, description, icon, date}) => {
 
       <TouchableOpacity className="flex flex-row w-full gap-1"
       onPress={()=> {
-        router.push({ pathname: "/notificationview", params: { title, description, icon, date } })
+        router.replace({ pathname: "/notificationview", params: { title, description, icon, date } })
       }}>
         <View className="items-center justify-center">
           <View className="border-black border-[1px] w-16 h-16 rounded-full items-center justify-center">

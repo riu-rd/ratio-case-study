@@ -55,15 +55,18 @@ export default function App() {
           <Link
           className="mb-8 text-blue-500 font-outfitbold text-base absolute top-2 right-5"
           href='/preferenceSettings'>
-          Settings
+          Preferences
           </Link>
-
           <Link
           className="mb-8 text-blue-500 font-outfitbold text-base absolute top-8 right-5"
           href='/likes'>
           Likes
           </Link>
-
+          <Link
+          className="mb-8 text-blue-500 font-outfitbold text-base absolute top-8 right-32"
+          href='/settings'>
+          Settings
+          </Link>
           {
             data.map((notif) => (
               <NotificationItem 

@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { SplashScreen, Stack } from 'expo-router';
 import { useFonts } from "expo-font";
 import { StatusBar } from 'expo-status-bar';
+import { TouchableOpacity, Text } from 'react-native';
+import { useRouter } from 'expo-router';
 
 /*************************************************************** 
 Prevent splash screen from auto hiding before asset 
@@ -10,6 +12,8 @@ loading is complete
 SplashScreen.preventAutoHideAsync(); 
 
 const RootLayout = () => {
+  const router = useRouter();
+
   const [fontsLoaded, error] = useFonts({
     // @ts-ignore
     "Outfit-Thin": require("../assets/fonts/Outfit-Thin.ttf"),
@@ -65,24 +69,83 @@ const RootLayout = () => {
       />
       
       <Stack>
-        <Stack.Screen name="index" options={
-          {headerShown: false}} />
-        <Stack.Screen name="notificationview" options={
-        {title: 'View Notification'}} />
-        <Stack.Screen name="likes" options={
-          {headerShown: false}} />
-        <Stack.Screen name="preferenceSettings" options={
-          {headerShown: false}} />
-        <Stack.Screen name="gender" options={
-        {
-          title: 'Gender',
+        <Stack.Screen 
+          name="index" 
+          options={{
+            headerShown: false
+          }} />
+        <Stack.Screen 
+          name="notificationview" 
+          options={{
+            title: 'View Notification'
+          }} />
+        <Stack.Screen 
+          name="likes" 
+          options={{
+            headerShown: false
+          }} />
+        <Stack.Screen 
+          name="preferenceSettings" 
+          options={{
+          title: "Preference Settings",
+          headerTitleAlign: 'left',
+          headerTitleStyle: {
+            fontSize: 20,
+            color: 'black',
+            fontFamily: 'Outfit-Bold'
+          },
+          headerBackVisible: false,
+          headerRight: () => (
+            <TouchableOpacity
+              style={{ marginRight: 10 }}
+              onPress={() => {
+                router.replace('/');
+              }}
+            >
+              <Text 
+              className="font-outfitsemibold text-base text-colorlink underline">
+                Done
+              </Text>
+            </TouchableOpacity>
+            )
+          }} />
+        <Stack.Screen 
+          name="gender" 
+          options={{
+            title: 'Gender',
+            headerTitleAlign: 'center',
+            headerTitleStyle: {
+              fontSize: 28,
+              color: 'black',
+              fontFamily: "Outfit-Bold"
+            }
+          }} />
+        <Stack.Screen
+        name="settings"
+        
+        options={{
+          title: "Settings",
           headerTitleAlign: 'center',
           headerTitleStyle: {
-            fontSize: 28,
+            fontSize: 24,
             color: 'black',
-            fontFamily: "Outfit-Bold"
-          }
-        }} />
+            fontFamily: 'Outfit-Bold'
+          },
+          headerBackVisible: false,
+          headerRight: () => (
+            <TouchableOpacity
+              style={{ marginRight: 10 }}
+              onPress={() => {
+                router.replace('/');
+              }}
+            >
+              <Text 
+              className="font-outfitsemibold text-base text-colorlink underline">
+                Done
+              </Text>
+            </TouchableOpacity>
+            )
+          }} />
       </Stack>
       
     </>

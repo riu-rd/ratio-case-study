@@ -45,7 +45,7 @@ const gender = () => {
 
           <TouchableOpacity className="flex flex-row items-center justify-center gap-2 w-full bg-colorhandle rounded-full h-16 m-5"
           onPress={()=> {
-            router.push({ pathname: "/preferenceSettings", params: { gender } })
+            router.replace({ pathname: "/preferenceSettings", params: { gender } })
           }}>
             <Text className="text-white font-outfitbold text-base"> 
               Confirm
