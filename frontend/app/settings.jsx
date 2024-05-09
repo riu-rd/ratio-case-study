@@ -4,10 +4,13 @@ import React, { useState } from 'react';
 import { useRouter } from 'expo-router';
 import icons from '../constants/icons';
 
+import SettingsAlert from '../components/settingsAlert';
+
 const settings = () => {
   const router = useRouter();
-
   const [pausedProfile, setPausedProfile] = useState(false);
+  const [showLogout, setShowLogout] = useState(false);
+  const [showDelete, setShowDelete] = useState(false);
 
   return (
     <SafeAreaView className="bg-primary w-full h-full justify-start">
@@ -234,15 +237,36 @@ const settings = () => {
           <View className ="flex flex-row justify-between items-center my-10 w-full px-4 flex-wrap">
             <SettingsButton 
               title={"Log Out"}
-              handlePress={() => Alert.alert('Logout Button pressed')}
+              handlePress={() => setShowLogout(true)}
               extraProps={"bg-[#81D8D0]"}
             />
             <SettingsButton 
               title={"Delete account"}
-              handlePress={() => Alert.alert('Delete account Button pressed')}
+              handlePress={() => setShowDelete(true)}
               extraProps={"bg-transparent border-[1px] border-black"}
             />
           </View>
+
+          <SettingsAlert
+            alert={showLogout}
+            setShowAlert={setShowLogout}
+            header={"Are you sure you want to log out? You'll still be visible to compatible users at your last known location."}
+            headerProps={"text-base"}
+            subheader={"Choose 'REMEMBER ME ON THIS DEVICE' for a quick and effortless login next time. "}
+            subheaderProps={"text-xs"}
+            positiveButtonText={"Forget me on this Device"}
+            negativeButtonText={"Remember me on this Device"}
+          />
+          <SettingsAlert
+            alert={showDelete}
+            setShowAlert={setShowDelete}
+            header={"Confirm"}
+            headerProps={"text-xl"}
+            subheader={"Are you sure you want to delete your account? This action cannot be undone."}
+            subheaderProps={"text-sm"}
+            positiveButtonText={"Hide Profile"}
+            negativeButtonText={"Delete Account"}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>

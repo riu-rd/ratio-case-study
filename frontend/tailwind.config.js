@@ -9,6 +9,7 @@ module.exports = {
         colorhandle: "#0883AA",
         gray: "#919191",
         colorline: "#EDEDED",
+        alertbackground: "#eff0f0"
       },
       fontFamily: {
         outfitthin: ["Outfit-Thin", "sans-serif"], 
