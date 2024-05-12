@@ -34,6 +34,12 @@ module.exports = {
         sfpromedium: ["SFProText-Medium", "sans-serif"],
         sfprosemibold: ["SFProText-SemiBold", "sans-serif"],
         sfprobold: ["SFProText-Bold", "sans-serif"],
+
+        interlight: ["Inter-Light", "sans-serif"],
+        internormal: ["Inter-Normal", "sans-serif"],
+        intermedium: ["Inter-Medium", "sans-serif"],
+        intersemibold: ["Inter-SemiBold", "sans-serif"],
+        interbold: ["Inter-Bold", "sans-serif"],
       },
     },
   },

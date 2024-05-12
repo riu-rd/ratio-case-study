@@ -22,7 +22,7 @@ const likes = () => {
           <BottomSheet 
             ref={ref => panelRef.current = ref}
             sliderMinHeight={0}
-            sliderMaxHeight={Dimensions.get('window').height * 0.8}
+            sliderMaxHeight={Dimensions.get('window').height * 0.9}
           >
             <LikesModal />
           </BottomSheet>
