@@ -5,11 +5,12 @@ module.exports = {
     extend: {
       colors: {
         primary: "#FFFFFF",
-        colorlink: "#2EA7D3",
-        colorhandle: "#0883AA",
+        cerulean: "#2EA7D3",
+        ceruleanblue: "#0883AA",
         gray: "#919191",
-        colorline: "#EDEDED",
-        alertbackground: "#eff0f0"
+        lightgray: "#EDEDED",
+        lightbluegray: "#eff0f0",
+        halftransparent: "#00000080"
       },
       fontFamily: {
         outfitthin: ["Outfit-Thin", "sans-serif"], 
@@ -22,12 +23,17 @@ module.exports = {
         outfitextrabold: ["Outfit-ExtraBold", "sans-serif"],
         outfitblack: ["Outfit-Black", "sans-serif"],
 
-
         zillalight: ["ZillaSlab-Light", "sans-serif"],
         zillanormal: ["ZillaSlab-Normal", "sans-serif"],
         zillamedium: ["ZillaSlab-Medium", "sans-serif"],
         zillasemibold: ["ZillaSlab-SemiBold", "sans-serif"],
         zillabold: ["ZillaSlab-Bold", "sans-serif"],
+
+        sfprolight: ["SFProText-Light", "sans-serif"],
+        sfpronormal: ["SFProText-Normal", "sans-serif"],
+        sfpromedium: ["SFProText-Medium", "sans-serif"],
+        sfprosemibold: ["SFProText-SemiBold", "sans-serif"],
+        sfprobold: ["SFProText-Bold", "sans-serif"],
       },
     },
   },

@@ -18,7 +18,7 @@ const SettingsAlert = ({alert, setShowAlert , header, headerProps, subheader, su
       hardwareAccelerated
     >
       <View className="justify-center items-center flex-1 bg-[#00000099]">
-        <View className="w-[90%] rounded-2xl top-1/4 bg-alertbackground">
+        <View className="w-[90%] rounded-2xl top-1/4 bg-lightbluegray">
 
           <View className="items-center justify-center border-b-[1px] border-neutral-300 py-5 px-8">
             <Text className={`font-outfitsemibold text-center text-black ${headerProps}`}>

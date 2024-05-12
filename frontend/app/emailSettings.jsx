@@ -13,7 +13,7 @@ const EmailSettings = () => {
           </Text>
         </View>
 
-        <View className="w-full h-[1px] bg-colorline" />
+        <View className="w-full h-[1px] bg-lightgray" />
 
         <TouchableOpacity className="w-full justify-start items-center px-5">
           <Text className="font-outfitsemibold text-sm text-black py-3 w-full text-start">
@@ -21,7 +21,7 @@ const EmailSettings = () => {
           </Text>
         </TouchableOpacity>
 
-        <View className="w-full h-[1px] bg-colorline" />
+        <View className="w-full h-[1px] bg-lightgray" />
 
         <View className="w-full justify-start items-center px-5">
           <Text className="font-outfitsemibold text-sm text-[#14B7EA] py-3 w-full text-start">
@@ -29,7 +29,7 @@ const EmailSettings = () => {
           </Text>
         </View>
 
-        <View className="w-full h-[1px] bg-colorline" />
+        <View className="w-full h-[1px] bg-lightgray" />
 
         <TouchableOpacity className="w-full justify-center items-center px-5">
           <Text className="font-outfitsemibold text-sm text-black py-3 w-full text-center">
@@ -37,7 +37,7 @@ const EmailSettings = () => {
           </Text>
         </TouchableOpacity>
 
-        <View className="w-full h-[1px] bg-colorline" />
+        <View className="w-full h-[1px] bg-lightgray" />
           
         </View>
       </ScrollView>

@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
-import { SplashScreen, Stack } from 'expo-router';
+import React, { useEffect, useCallback } from 'react';
+import { Stack } from 'expo-router';
 import { useFonts } from "expo-font";
 import { StatusBar } from 'expo-status-bar';
-import { TouchableOpacity, Text } from 'react-native';
+import { TouchableOpacity, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
+import * as SplashScreen from 'expo-splash-screen';
 
 /*************************************************************** 
 Prevent splash screen from auto hiding before asset 
@@ -14,7 +15,7 @@ SplashScreen.preventAutoHideAsync();
 const RootLayout = () => {
   const router = useRouter();
 
-  const [fontsLoaded, error] = useFonts({
+  const [fontsLoaded, fontError] = useFonts({
     // @ts-ignore
     "Outfit-Thin": require("../assets/fonts/Outfit-Thin.ttf"),
     // @ts-ignore
@@ -43,29 +44,38 @@ const RootLayout = () => {
     // @ts-ignore
     "ZillaSlab-SemiBold": require("../assets/fonts/ZillaSlab-SemiBold.ttf"),
     // @ts-ignore
-    "ZillaSlab-Bold": require("../assets/fonts/ZillaSlab-Bold.ttf")
+    "ZillaSlab-Bold": require("../assets/fonts/ZillaSlab-Bold.ttf"),
+
+    // @ts-ignore
+    "SFProText-Light": require("../assets/fonts/SFProText-Light.ttf"),
+    // @ts-ignore
+    "SFProText-Normal": require("../assets/fonts/SFProText-Regular.ttf"),
+    // @ts-ignore
+    "SFProText-Medium": require("../assets/fonts/SFProText-Medium.ttf"),
+    // @ts-ignore
+    "SFProText-SemiBold": require("../assets/fonts/SFProText-SemiBold.ttf"),
+    // @ts-ignore
+    "SFProText-Bold": require("../assets/fonts/SFProText-Bold.ttf")
   });
 
   /*************************************************************** 
               useEffect to make sure fonts are loaded
   ***************************************************************/
-  useEffect(() => {
-    if (error) {
-      throw error;
+  const onLayoutRootView = useCallback(async () => {
+    if (fontsLoaded || fontError) {
+      await SplashScreen.hideAsync();
     }
-    if (fontsLoaded) {
-      SplashScreen.hideAsync();
-    }
-    if (!fontsLoaded && !error) {
-      return
-    }
-  }, [fontsLoaded, error])
+  }, [fontsLoaded, fontError]);
+
+  if (!fontsLoaded && !fontError) {
+    return null;
+  }
 
   return (
-    <>
+    <View className="w-full h-full" onLayout={onLayoutRootView}>
       <StatusBar
         backgroundColor='#FFFFFF'
-        style="light"
+        style="dark"
       />
       
       <Stack>
@@ -103,8 +113,8 @@ const RootLayout = () => {
               }}
             >
               <Text 
-              className="font-outfitsemibold text-base text-colorlink underline">
-                Done
+                className="font-outfitsemibold text-base text-cerulean underline">
+                  Done
               </Text>
             </TouchableOpacity>
             )
@@ -139,7 +149,7 @@ const RootLayout = () => {
                 }}
               >
                 <Text 
-                className="font-outfitsemibold text-base text-colorlink underline">
+                className="font-outfitsemibold text-base text-cerulean underline">
                   Done
                 </Text>
               </TouchableOpacity>
@@ -168,7 +178,7 @@ const RootLayout = () => {
             }
           }} />
         </Stack>
-    </>
+    </View>
   )
 }
 

@@ -70,6 +70,7 @@ export default function App() {
           {
             data.map((notif) => (
               <NotificationItem 
+                key={notif.title}
                 title={notif.title}
                 description={notif.description}
                 icon={setIcon(notif.type)}

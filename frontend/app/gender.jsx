@@ -23,12 +23,12 @@ const gender = () => {
   return (
     <SafeAreaView className="bg-primary w-full h-full">
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <View className="justify-between items-center h-full w-full px-5">
+        <View className="justify-between items-center h-full w-full px-6">
           <View className="justify-between items-center h-fit w-full">
             <Text className="text-black text-xl font-outfitbold text-start w-full">
               I’m looking to connect with... 
             </Text>
-            <Text className="text-gray text-xs font-outfitsemibold text-start w-full mb-3">
+            <Text className="text-halftransparent text-xs font-outfitsemibold text-start w-full mb-3">
               Select the options below who you would like to meet
             </Text>
 
@@ -36,14 +36,14 @@ const gender = () => {
             <GenderButton icon={icons.female} name="Female" color="#fdf4ff" handleGender={handleGender} gender={gender}/>
             <GenderButton icon={icons.both} name="Both" color="#fffbeb" handleGender={handleGender} gender={gender}/>
             
-            <View className="w-full items-start mt-3">
-              <Text className="text-gray text-xs font-outfitsemibold text-start w-9/10">
+            <View className="w-full items-start justify-start mt-2">
+              <Text className="text-gray text-xs font-outfitsemibold text-start pr-6">
                 Your matches will reflect the new selected option so that it fits your preference. 
               </Text>
             </View>
           </View>
 
-          <TouchableOpacity className="flex flex-row items-center justify-center gap-2 w-full bg-colorhandle rounded-full h-16 m-5"
+          <TouchableOpacity className="flex flex-row items-center justify-center gap-2 w-full bg-ceruleanblue rounded-full h-16 m-5"
           onPress={()=> {
             router.replace({ pathname: "/preferenceSettings", params: { gender } })
           }}>

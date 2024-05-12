@@ -22,7 +22,7 @@ const settings = () => {
               Phone Number & Email
             </Text>
 
-            <View className="w-full h-[1px] bg-colorline" />
+            <View className="w-full h-[1px] bg-lightgray" />
 
             <TouchableOpacity className="w-full flex flex-row justify-between items-center py-3"
               // onPress={()=> {
@@ -40,7 +40,7 @@ const settings = () => {
               </View>
             </TouchableOpacity>
 
-            <View className="w-full h-[1px] bg-colorline" />
+            <View className="w-full h-[1px] bg-lightgray" />
 
             <TouchableOpacity className="w-full flex flex-row justify-between items-center py-3"
               onPress={()=> {
@@ -59,7 +59,7 @@ const settings = () => {
             </TouchableOpacity>
           </View>
 
-          <View className="w-full h-[1px] bg-colorline" />
+          <View className="w-full h-[1px] bg-lightgray" />
 
           <View className="w-full flex flex-row justify-center items-center flex-wrap py-5 pl-5">
             <View className="justify-start items-start w-4/5 h-full">
@@ -82,14 +82,14 @@ const settings = () => {
             </View>
           </View>
 
-          <View className="w-full h-[1px] bg-colorline" />
+          <View className="w-full h-[1px] bg-lightgray" />
 
           <View className="w-full justify-start items-center px-5">
             <Text className="font-outfitbold text-sm text-[#838383] mt-5 py-3 w-full text-start">
               Notifications
             </Text>
 
-            <View className="w-full h-[1px] bg-colorline" />
+            <View className="w-full h-[1px] bg-lightgray" />
 
             <TouchableOpacity className="w-full flex flex-row justify-between items-center py-3"
               onPress={()=> {
@@ -108,14 +108,14 @@ const settings = () => {
             </TouchableOpacity>
           </View>
 
-          <View className="w-full h-[1px] bg-colorline" />
+          <View className="w-full h-[1px] bg-lightgray" />
 
           <View className="w-full justify-start items-center px-5">
             <Text className="font-outfitbold text-sm text-[#838383] mt-8 py-3 w-full text-start">
               Legal
             </Text>
 
-            <View className="w-full h-[1px] bg-colorline" />
+            <View className="w-full h-[1px] bg-lightgray" />
 
             <TouchableOpacity className="w-full flex flex-row justify-between items-center py-3"
               // onPress={()=> {
@@ -133,7 +133,7 @@ const settings = () => {
               </View>
             </TouchableOpacity>
 
-            <View className="w-full h-[1px] bg-colorline" />
+            <View className="w-full h-[1px] bg-lightgray" />
 
             <TouchableOpacity className="w-full flex flex-row justify-between items-center py-3"
               // onPress={()=> {
@@ -151,7 +151,7 @@ const settings = () => {
               </View>
             </TouchableOpacity>
 
-            <View className="w-full h-[1px] bg-colorline" />
+            <View className="w-full h-[1px] bg-lightgray" />
 
             <TouchableOpacity className="w-full flex flex-row justify-between items-center py-3"
               // onPress={()=> {
@@ -170,14 +170,14 @@ const settings = () => {
             </TouchableOpacity>
           </View>
 
-          <View className="w-full h-[1px] bg-colorline" />
+          <View className="w-full h-[1px] bg-lightgray" />
 
           <View className="w-full justify-start items-center px-5">
             <Text className="font-outfitbold text-sm text-[#838383] mt-8 py-3 w-full text-start">
               Community
             </Text>
 
-            <View className="w-full h-[1px] bg-colorline" />
+            <View className="w-full h-[1px] bg-lightgray" />
 
             <TouchableOpacity className="w-full flex flex-row justify-between items-center py-3"
               // onPress={()=> {
@@ -195,7 +195,7 @@ const settings = () => {
               </View>
             </TouchableOpacity>
 
-            <View className="w-full h-[1px] bg-colorline" />
+            <View className="w-full h-[1px] bg-lightgray" />
 
             <TouchableOpacity className="w-full flex flex-row justify-between items-center py-3"
               // onPress={()=> {
@@ -213,7 +213,7 @@ const settings = () => {
               </View>
             </TouchableOpacity>
 
-            <View className="w-full h-[1px] bg-colorline" />
+            <View className="w-full h-[1px] bg-lightgray" />
 
             <TouchableOpacity className="w-full flex flex-row justify-between items-center py-3"
               // onPress={()=> {
@@ -232,7 +232,7 @@ const settings = () => {
             </TouchableOpacity>
           </View>
 
-          <View className="w-full h-[1px] bg-colorline" />
+          <View className="w-full h-[1px] bg-lightgray" />
 
           <View className ="flex flex-row justify-between items-center my-10 w-full px-4 flex-wrap">
             <SettingsButton 
