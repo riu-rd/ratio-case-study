@@ -10,7 +10,9 @@ module.exports = {
         gray: "#919191",
         lightgray: "#EDEDED",
         lightbluegray: "#eff0f0",
-        halftransparent: "#00000080"
+        darkgray: "#838383",
+        halftransparent: "#00000080",
+        turquoise: "#81D8D0"
       },
       fontFamily: {
         outfitthin: ["Outfit-Thin", "sans-serif"], 
@@ -40,6 +42,12 @@ module.exports = {
         intermedium: ["Inter-Medium", "sans-serif"],
         intersemibold: ["Inter-SemiBold", "sans-serif"],
         interbold: ["Inter-Bold", "sans-serif"],
+
+        sfprodisplaylight: ["SFProDisplay-Light", "sans-serif"],
+        sfprodisplaynormal: ["SFProDisplay-Normal", "sans-serif"],
+        sfprodisplaymedium: ["SFProDisplay-Medium", "sans-serif"],
+        sfprodisplaysemibold: ["SFProDisplay-SemiBold", "sans-serif"],
+        sfprodisplaybold: ["SFProDisplay-Bold", "sans-serif"],
       },
     },
   },

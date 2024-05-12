@@ -6,9 +6,9 @@ const SettingsButton = ({title, handlePress, extraProps}) => {
     <TouchableOpacity
       key={title}
       onPress={() => handlePress()}
-      className={`items-center justify-center w-fit rounded-2xl h-10 my-2 mx-0 overflow-hidden ${extraProps}`}
+      className={`items-center justify-center w-[47%] rounded-2xl h-11 my-2 mx-0 overflow-hidden ${extraProps}`}
       >
-      <View className={`flex flex-row items-center justify-center w-[70%] h-full`}>
+      <View className={`flex flex-row items-center justify-center w-full h-full`}>
         <Text className="font-outfitbold text-sm text-black">{title}</Text>
       </View>
     </TouchableOpacity>

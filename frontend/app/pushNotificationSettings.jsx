@@ -13,8 +13,8 @@ const PushNotificationSettings = () => {
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <View className="w-full justify-start items-center">
 
-        <View className="w-full flex flex-row justify-between items-center py-1 px-5">
-          <Text className="font-outfitbold text-sm">
+        <View className="w-full flex flex-row justify-between items-center py-1 px-6">
+          <Text className="font-outfitsemibold text-sm">
             All Notifications
           </Text>
           <View className="flex flex-row justify-center items-center gap-2">
@@ -24,15 +24,15 @@ const PushNotificationSettings = () => {
               ios_backgroundColor="#3e3e3e"
               onValueChange={() => setAllNotifications(previousState => !previousState)}
               value={allNotifications}
-              style={{ transform: [{ scaleX: 1.5 }, { scaleY: 1.5 }] }}
+              style={{ transform: [{ scaleX: 1.6 }, { scaleY: 1.6 }] }}
             />
           </View>
         </View>
 
-        <View className="w-full h-[1px] bg-colorline" />
+        <View className="w-full h-[1px] bg-lightgray" />
 
-        <View className="w-full flex flex-row justify-between items-center py-1 px-5">
-          <Text className="font-outfitbold text-sm">
+        <View className="w-full flex flex-row justify-between items-center py-1 px-6">
+          <Text className="font-outfitsemibold text-sm">
             New Matches
           </Text>
           <View className="flex flex-row justify-center items-center gap-2">
@@ -42,15 +42,15 @@ const PushNotificationSettings = () => {
               ios_backgroundColor="#3e3e3e"
               onValueChange={() => setNewMatches(previousState => !previousState)}
               value={newMatches}
-              style={{ transform: [{ scaleX: 1.5 }, { scaleY: 1.5 }] }}
+              style={{ transform: [{ scaleX: 1.6 }, { scaleY: 1.6 }] }}
             />
           </View>
         </View>
 
-        <View className="w-full h-[1px] bg-colorline" />
+        <View className="w-full h-[1px] bg-lightgray" />
 
-        <View className="w-full flex flex-row justify-between items-center py-1 px-5">
-          <Text className="font-outfitbold text-sm">
+        <View className="w-full flex flex-row justify-between items-center py-1 px-6">
+          <Text className="font-outfitsemibold text-sm">
             New Messages
           </Text>
           <View className="flex flex-row justify-center items-center gap-2">
@@ -60,15 +60,15 @@ const PushNotificationSettings = () => {
               ios_backgroundColor="#3e3e3e"
               onValueChange={() => setNewMessages(previousState => !previousState)}
               value={newMessages}
-              style={{ transform: [{ scaleX: 1.5 }, { scaleY: 1.5 }] }}
+              style={{ transform: [{ scaleX: 1.6 }, { scaleY: 1.6 }] }}
             />
           </View>
         </View>
 
-        <View className="w-full h-[1px] bg-colorline" />
+        <View className="w-full h-[1px] bg-lightgray" />
 
-        <View className="w-full flex flex-row justify-between items-center py-1 px-5">
-          <Text className="font-outfitbold text-sm">
+        <View className="w-full flex flex-row justify-between items-center py-1 px-6">
+          <Text className="font-outfitsemibold text-sm">
             New Likes
           </Text>
           <View className="flex flex-row justify-center items-center gap-2">
@@ -78,15 +78,15 @@ const PushNotificationSettings = () => {
               ios_backgroundColor="#3e3e3e"
               onValueChange={() => setNewLikes(previousState => !previousState)}
               value={newLikes}
-              style={{ transform: [{ scaleX: 1.5 }, { scaleY: 1.5 }] }}
+              style={{ transform: [{ scaleX: 1.6 }, { scaleY: 1.6 }] }}
             />
           </View>
         </View>
 
-        <View className="w-full h-[1px] bg-colorline" />
+        <View className="w-full h-[1px] bg-lightgray" />
 
-        <View className="w-full flex flex-row justify-between items-center py-1 px-5">
-          <Text className="font-outfitbold text-sm">
+        <View className="w-full flex flex-row justify-between items-center py-1 px-6">
+          <Text className="font-outfitsemibold text-sm">
             Announcements on Ratio
           </Text>
           <View className="flex flex-row justify-center items-center gap-2">
@@ -96,12 +96,12 @@ const PushNotificationSettings = () => {
               ios_backgroundColor="#3e3e3e"
               onValueChange={() => setAnnouncements(previousState => !previousState)}
               value={announcements}
-              style={{ transform: [{ scaleX: 1.5 }, { scaleY: 1.5 }] }}
+              style={{ transform: [{ scaleX: 1.6 }, { scaleY: 1.6 }] }}
             />
           </View>
         </View>
 
-        <View className="w-full h-[1px] bg-colorline" />
+        <View className="w-full h-[1px] bg-lightgray" />
 
         </View>
       </ScrollView>

@@ -67,6 +67,28 @@ const RootLayout = () => {
     "Inter-SemiBold": require("../assets/fonts/Inter-SemiBold.ttf"),
     // @ts-ignore
     "Inter-Bold": require("../assets/fonts/Inter-Bold.ttf"),
+
+    // @ts-ignore
+    "Inter-Light": require("../assets/fonts/Inter-Light.ttf"),
+    // @ts-ignore
+    "Inter-Normal": require("../assets/fonts/Inter-Regular.ttf"),
+    // @ts-ignore
+    "Inter-Medium": require("../assets/fonts/Inter-Medium.ttf"),
+    // @ts-ignore
+    "Inter-SemiBold": require("../assets/fonts/Inter-SemiBold.ttf"),
+    // @ts-ignore
+    "Inter-Bold": require("../assets/fonts/Inter-Bold.ttf"),
+
+    // @ts-ignore
+    "SFProDisplay-Light": require("../assets/fonts/SFProDisplay-Light.ttf"),
+    // @ts-ignore
+    "SFProDisplay-Normal": require("../assets/fonts/SFProDisplay-Regular.ttf"),
+    // @ts-ignore
+    "SFProDisplay-Medium": require("../assets/fonts/SFProDisplay-Medium.ttf"),
+    // @ts-ignore
+    "SFProDisplay-SemiBold": require("../assets/fonts/SFProDisplay-SemiBold.ttf"),
+    // @ts-ignore
+    "SFProDisplay-Bold": require("../assets/fonts/SFProDisplay-Bold.ttf"),
   });
 
   /*************************************************************** 

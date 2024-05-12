@@ -17,8 +17,8 @@ const settings = () => {
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <View className="justify-start items-center h-full w-full">
 
-          <View className="w-full justify-start items-center px-5">
-            <Text className="font-outfitsemibold text-sm text-[#838383] py-3 w-full text-start">
+          <View className="w-full justify-start items-center px-6">
+            <Text className="font-outfitsemibold text-sm text-darkgray py-3 w-full text-start">
               Phone Number & Email
             </Text>
 
@@ -61,8 +61,8 @@ const settings = () => {
 
           <View className="w-full h-[1px] bg-lightgray" />
 
-          <View className="w-full flex flex-row justify-center items-center flex-wrap py-5 pl-5">
-            <View className="justify-start items-start w-4/5 h-full">
+          <View className="w-full flex flex-row justify-center items-center flex-wrap py-2 pl-6">
+            <View className="justify-start items-start w-4/5 h-full py-4">
               <Text className="text-black text-sm font-outfitsemibold">
                 Pause Profile
               </Text>
@@ -77,15 +77,15 @@ const settings = () => {
                 ios_backgroundColor="#3e3e3e"
                 onValueChange={() => setPausedProfile(previousState => !previousState)}
                 value={pausedProfile}
-                style={{ transform: [{ scaleX: 1.5 }, { scaleY: 1.5 }] }}
+                style={{ transform: [{ scaleX: 1.6 }, { scaleY: 1.6 }] }}
               />
             </View>
           </View>
 
           <View className="w-full h-[1px] bg-lightgray" />
 
-          <View className="w-full justify-start items-center px-5">
-            <Text className="font-outfitbold text-sm text-[#838383] mt-5 py-3 w-full text-start">
+          <View className="w-full justify-start items-center px-6">
+            <Text className="font-outfitbold text-sm text-darkgray mt-5 py-3 w-full text-start">
               Notifications
             </Text>
 
@@ -96,7 +96,7 @@ const settings = () => {
                 router.push({ pathname: "/pushNotificationSettings", params: {  } })
               }}
             >
-              <Text className="font-outfitbold text-sm">
+              <Text className="font-outfitsemibold text-sm">
               Push Notifications
               </Text>
               <View className="flex flex-row justify-center items-center gap-2">
@@ -110,8 +110,8 @@ const settings = () => {
 
           <View className="w-full h-[1px] bg-lightgray" />
 
-          <View className="w-full justify-start items-center px-5">
-            <Text className="font-outfitbold text-sm text-[#838383] mt-8 py-3 w-full text-start">
+          <View className="w-full justify-start items-center px-6">
+            <Text className="font-outfitbold text-sm text-darkgray mt-8 py-3 w-full text-start">
               Legal
             </Text>
 
@@ -122,7 +122,7 @@ const settings = () => {
               //   router.replace({ pathname: "/", params: {  } })
               // }}
             >
-              <Text className="font-outfitbold text-sm">
+              <Text className="font-outfitsemibold text-sm">
               Privacy Policy
               </Text>
               <View className="flex flex-row justify-center items-center gap-2">
@@ -140,7 +140,7 @@ const settings = () => {
               //   router.replace({ pathname: "/", params: {  } })
               // }}
             >
-              <Text className="font-outfitbold text-sm">
+              <Text className="font-outfitsemibold text-sm">
               Terms of Service
               </Text>
               <View className="flex flex-row justify-center items-center gap-2">
@@ -158,7 +158,7 @@ const settings = () => {
               //   router.replace({ pathname: "/", params: {  } })
               // }}
             >
-              <Text className="font-outfitbold text-sm">
+              <Text className="font-outfitsemibold text-sm">
               Privacy Preferences
               </Text>
               <View className="flex flex-row justify-center items-center gap-2">
@@ -172,8 +172,8 @@ const settings = () => {
 
           <View className="w-full h-[1px] bg-lightgray" />
 
-          <View className="w-full justify-start items-center px-5">
-            <Text className="font-outfitbold text-sm text-[#838383] mt-8 py-3 w-full text-start">
+          <View className="w-full justify-start items-center px-6">
+            <Text className="font-outfitbold text-sm text-darkgray mt-8 py-3 w-full text-start">
               Community
             </Text>
 
@@ -184,7 +184,7 @@ const settings = () => {
               //   router.replace({ pathname: "/", params: {  } })
               // }}
             >
-              <Text className="font-outfitbold text-sm">
+              <Text className="font-outfitsemibold text-sm">
               Community Guidelines
               </Text>
               <View className="flex flex-row justify-center items-center gap-2">
@@ -202,7 +202,7 @@ const settings = () => {
               //   router.replace({ pathname: "/", params: {  } })
               // }}
             >
-              <Text className="font-outfitbold text-sm">
+              <Text className="font-outfitsemibold text-sm">
               Safety Center
               </Text>
               <View className="flex flex-row justify-center items-center gap-2">
@@ -220,7 +220,7 @@ const settings = () => {
               //   router.replace({ pathname: "/", params: {  } })
               // }}
             >
-              <Text className="font-outfitbold text-sm">
+              <Text className="font-outfitsemibold text-sm">
               Safe Dating Tips
               </Text>
               <View className="flex flex-row justify-center items-center gap-2">
@@ -234,11 +234,11 @@ const settings = () => {
 
           <View className="w-full h-[1px] bg-lightgray" />
 
-          <View className ="flex flex-row justify-between items-center my-10 w-full px-4 flex-wrap">
+          <View className ="flex flex-row justify-between items-center my-11 w-full px-4 flex-wrap">
             <SettingsButton 
               title={"Log Out"}
               handlePress={() => setShowLogout(true)}
-              extraProps={"bg-[#81D8D0]"}
+              extraProps={"bg-turquoise"}
             />
             <SettingsButton 
               title={"Delete account"}
@@ -251,9 +251,9 @@ const settings = () => {
             alert={showLogout}
             setShowAlert={setShowLogout}
             header={"Are you sure you want to log out? You'll still be visible to compatible users at your last known location."}
-            headerProps={"text-base"}
+            headerProps={"text-sm leading-5 tracking-tighter"}
             subheader={"Choose 'REMEMBER ME ON THIS DEVICE' for a quick and effortless login next time. "}
-            subheaderProps={"text-xs"}
+            subheaderProps={"text-xs tracking-tighter"}
             positiveButtonText={"Forget me on this Device"}
             negativeButtonText={"Remember me on this Device"}
           />
@@ -263,7 +263,7 @@ const settings = () => {
             header={"Confirm"}
             headerProps={"text-xl"}
             subheader={"Are you sure you want to delete your account? This action cannot be undone."}
-            subheaderProps={"text-sm"}
+            subheaderProps={"text-sm tracking-tighter leading-4"}
             positiveButtonText={"Hide Profile"}
             negativeButtonText={"Delete Account"}
           />
