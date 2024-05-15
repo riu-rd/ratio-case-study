@@ -3,7 +3,7 @@ import { Text, View, ScrollView, Image, TouchableOpacity} from "react-native";
 import { Link } from 'expo-router';
 import React, {useEffect, useState} from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import icons from "../constants/icons"
+import icons from "../constants/icons";
 import NotificationItem from "../components/NotificationItem";
 import axios from "axios";
 import Constants from "expo-constants";

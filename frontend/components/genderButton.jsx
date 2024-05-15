@@ -20,4 +20,4 @@ const GenderButton = ({icon, name, color, handleGender, gender}) => {
   )
 }
 
-export default GenderButton
+export default GenderButton;

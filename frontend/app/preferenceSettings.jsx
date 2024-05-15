@@ -196,4 +196,4 @@ const preferenceSettings = () => {
   )
 }
 
-export default preferenceSettings
+export default preferenceSettings;

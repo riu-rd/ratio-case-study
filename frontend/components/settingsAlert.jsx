@@ -1,10 +1,5 @@
-import React, { useState } from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  Modal
-} from 'react-native';
+import React from 'react';
+import { View, Text, TouchableOpacity, Modal } from 'react-native';
 
 const SettingsAlert = ({alert, setShowAlert , header, headerProps, subheader, subheaderProps, positiveButtonText, negativeButtonText}) => {
   return (
@@ -68,4 +63,4 @@ const SettingsAlert = ({alert, setShowAlert , header, headerProps, subheader, su
   )
 }
 
-export default SettingsAlert
+export default SettingsAlert;

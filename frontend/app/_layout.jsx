@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import { Stack } from 'expo-router';
 import { useFonts } from "expo-font";
 import { StatusBar } from 'expo-status-bar';
@@ -215,4 +215,4 @@ const RootLayout = () => {
   )
 }
 
-export default RootLayout
+export default RootLayout;

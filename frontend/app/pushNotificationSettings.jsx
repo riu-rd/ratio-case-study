@@ -1,5 +1,5 @@
-import { View, Text, SafeAreaView, Switch, ScrollView } from 'react-native'
-import React, { useState } from 'react'
+import { View, Text, SafeAreaView, Switch, ScrollView } from 'react-native';
+import React, { useState } from 'react';
 
 const PushNotificationSettings = () => {
   const [allNotifications, setAllNotifications] = useState(false);
@@ -109,4 +109,4 @@ const PushNotificationSettings = () => {
   )
 }
 
-export default PushNotificationSettings
+export default PushNotificationSettings;

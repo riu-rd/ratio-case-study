@@ -1,6 +1,6 @@
-import { View, ScrollView, Text, Button, Dimensions } from 'react-native';
+import { View, ScrollView, Button, Dimensions } from 'react-native';
 import { SafeAreaView } from "react-native-safe-area-context";
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import LikesModal from '../components/likesModal';
 import BottomSheet from 'react-native-simple-bottom-sheet';
 
@@ -26,10 +26,10 @@ const likes = () => {
           >
             <LikesModal />
           </BottomSheet>
+          
         </View>
       </ScrollView>
     </SafeAreaView>
-      
   )
 }
 

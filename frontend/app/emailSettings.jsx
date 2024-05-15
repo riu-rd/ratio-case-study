@@ -45,4 +45,4 @@ const EmailSettings = () => {
   )
 }
 
-export default EmailSettings
+export default EmailSettings;

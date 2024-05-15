@@ -1,9 +1,8 @@
-import { View, Text, ScrollView, TouchableOpacity, Switch, Image, SafeAreaView, Alert } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, Switch, Image, SafeAreaView } from 'react-native';
 import SettingsButton from '../components/settingsButton';
 import React, { useState } from 'react';
 import { useRouter } from 'expo-router';
 import icons from '../constants/icons';
-
 import SettingsAlert from '../components/settingsAlert';
 
 const settings = () => {
@@ -273,4 +272,4 @@ const settings = () => {
   )
 }
 
-export default settings
+export default settings;
